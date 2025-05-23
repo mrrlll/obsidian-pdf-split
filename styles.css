@@ -1,8 +1,65 @@
-/*
+.range-inputs {
+	margin-top: 1em;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+}
 
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
+.range-wrapper {
+	display: flex;
+	gap: 0.5em;
+	align-items: center;
+	/* 新しいコンテナに合わせて調整 */
+}
 
-If your plugin does not need CSS, delete this file.
+.range-field-container {
+	flex: 1; /* 入力フィールドが利用可能なスペースを埋めるように */
+}
 
-*/
+.remove-button-container {
+	/* 削除ボタンのコンテナのスタイル調整が必要であればここに追加 */
+}
+
+.range-field {
+	/* flex: 1; 親コンテナでflex: 1を設定したので不要 */
+	padding: 4px 8px;
+	width: 100%; /* コンテナの幅いっぱいに広がるように */
+	box-sizing: border-box; /* paddingとborderをwidthに含める */
+}
+
+button {
+	padding: 4px 8px;
+	font-size: 0.9em;
+	cursor: pointer;
+}
+
+button + button {
+	margin-left: 0.5em;
+}
+
+h3 {
+	margin-top: 0;
+	font-size: 1.2em;
+	font-weight: bold;
+	border-bottom: 1px solid var(--background-modifier-border);
+	padding-bottom: 0.25em;
+}
+
+button.add-range {
+	margin-top: 12px;
+}
+
+button.split-run {
+	margin-top: 16px;
+	width: 100%;
+	font-weight: bold;
+}
+
+.split-explanation {
+	margin-top: 12px;
+	font-size: 13px;
+	color: var(--text-muted);
+	white-space: pre-line;
+	border-top: 1px solid var(--background-modifier-border);
+	padding-top: 8px;
+}
